@@ -1,49 +1,19 @@
-<html>
-  <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-    <title>Ypê - Unidos Pela Paz</title>
-    <link rel="stylesheet" href="./style.css" >
-  </head>
-  <body>
-    <div class="top">   
-      <header>
-        <div class="center">
-          <div class="logo-container">
-            <img src="./images/logo-ype.png" />
-            <img src="./images/logo-unidos-pela-paz.png" />
-          </div>
-          <nav class="menu-container">
-            <ul class="menu">
-              <li><a href="/" class="menu-item active">O Projeto</a></li>
-              <li><a href="/galeria" class="menu-item">Galeria</a></li>
-              <li><a href="/contato" class="menu-item">Contato</a></li>
-            </ul>
-          </nav>
-          <div class="icones-container">
-            <ul class="icones">
-              <li><a href="/"><img src="./images/icones/icone-facebook.png" /></a></li>
-              <li><a href="/"><img src="./images/icones/icone-instagram.png" /></a></li>
-              <li><a href="/"><img src="./images/icones/icone-youtube.png" /></a></li>
-            </ul>
-          </div>
-          <div class="line-container">
-            <div class="line"></div>
-          </div>
+
+    <?php 
+      include 'header.php';
+      include 'top.php';
+      getHeader();
+      renderTop('projeto');
+    ?>
+          <section class="hero">
+            <img src="./images/banner-hero.png" />
+            <a href="/" class="button-outline">
+    
+              <span>Faça já sua inscrição</span>
+            </a>
+          </section>
         </div>
-
-      </header>
-      <section class="hero">
-        <a href="/" class="button-outline">
-
-          <span>Faça já sua inscrição</span>
-        </a>
-      </section>
     </div>
-
     <section class="mensagem">
       <div class="center flex">
         <div class="w50">
@@ -149,110 +119,37 @@
       <div class="center">
         <h2 class="section-title">Seções Temáticas</h2>
         <div class="cards-container">
-          <!--  -->
-          <div class="card-single">
-            <div class="card-front">            
-              <div class="card-single-top">  
-                <span>01</span>
-                <img src="./images/card-1.svg" />
-              </div>
-              <div class="card-single-bottom">
-                <span>
-                  Estação<br/> 
-                  Memória
-                </span>
-                <a><img src="./images/card-seta.svg" /></a>
-              </div>
-            </div>
-            <div class="card-back">
-              <div class="card-back-header">
-                <span>01</span>
-                <h3>Estação Memória</h3>
-                <img src="./images/card-1.svg" />
-              </div>
-              <div class="card-back-body">
-                <p>
-                  Uma viagem no tempo para reviver os maravilhosos momentos das edições do Movimento Você e a Paz desde 2013 e também para escrever mais um novo capítulo nessa história.
-                </p>
-              </div>
-              <div class="card-back-footer">
-                <a>
-                  <img src="./images/card-seta-azul.svg" />
-                </a>
-              </div>
-            </div>
+ 
+          <!-- CARD 01 -->
+          <?php
+          include 'card.php';
 
-          </div>
-          <!--  -->
-          <div class="card-single">
-            <div class="card-front">            
-              <div class="card-single-top">  
-                <span>02</span>
-                <img src="./images/card-2.svg" />
-              </div>
-              <div class="card-single-bottom">
-                <span>
-                  Estação<br/>Saúde
-                </span>
-                <a><img src="./images/card-seta.svg" /></a>
-              </div>
-            </div>
-            <div class="card-back">
-              <div class="card-back-header">
-                <span>02</span>
-                <h3>Estação Saúde</h3>
-                <img src="./images/card-2.svg" />
-              </div>
-              <div class="card-back-body">
-                <p>
-                  A paz do mundo começa em mim e o cuidado também. Aqui você e sua família vão receber orientações para colocar a sua saúde em primeiro lugar.
-                </p>
-              </div>
-              <div class="card-back-footer">
-                <a>
-                  <img src="./images/card-seta-azul.svg" />
-                </a>
-              </div>
-            </div>
+          renderCard(
+            '01',
+            'Estação<br/>Memória',
+            'Uma viagem no tempo para reviver os maravilhosos momentos das edições do Movimento Você e a Paz desde 2013 e também para escrever mais um novo capítulo nessa história.',
+            './images/card-1.svg'
+          );
+  
+          renderCard(
+            '03',
+            'Estação<br/>Saúde',
+            'A paz do mundo começa em mim e o cuidado também. Aqui você e sua família vão receber orientações para colocar a sua saúde em primeiro lugar.',
+            './images/card-2.svg'
+          );
 
-          </div>
-          <!--  -->
-          <div class="card-single">
-            <div class="card-front">            
-              <div class="card-single-top">  
-                <span>03</span>
-                <img src="./images/card-3.svg" />
-              </div>
-              <div class="card-single-bottom">
-                <span>
-                  Estação<br/>Contação de História
-                </span>
-                <a><img src="./images/card-seta.svg" /></a>
-              </div>
-            </div>
-            <div class="card-back">
-              <div class="card-back-header">
-                <span>03</span>
-                <h3>Estação Contação de História</h3>
-                <img src="./images/card-3.svg" />
-              </div>
-              <div class="card-back-body">
-                <p>
-                  Em um ambiente acolhedor, a imaginação vai rolar soltar para crianças de todas as idades. Venha viajar com a gente por vários lugares sem sair do lugar.
-                </p>
-              </div>
-              <div class="card-back-footer">
-                <a>
-                  <img src="./images/card-seta-azul.svg" />
-                </a>
-              </div>
-            </div>
+          renderCard(
+            '03',
+            'Estação<br/>Contação de História',
+            'Em um ambiente acolhedor, a imaginação vai rolar soltar para crianças de todas as idades. Venha viajar com a gente por vários lugares sem sair do lugar.',
+            './images/card-3.svg'
+          );
+          ?>
 
-          </div>
 
         </div>
       </div>
-    </section>
+    </section> 
 
     <script>
       function myMap() {
