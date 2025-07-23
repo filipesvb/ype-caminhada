@@ -1,0 +1,502 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Outfit",sans-serif;
+}
+
+.center {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.flex {
+  display: flex;
+}
+.w50 {
+  width: 50%;
+}
+
+.section-title {
+  font-size: 32px;
+  position: relative;
+  margin-bottom: 2rem;
+}
+.section-title::after {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: -5%;
+  display: inline-block;
+  width: 400px;
+  height: 2px;
+  background-color: #fff;
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #00ABF0;
+  padding-bottom: 2rem;
+}
+
+header {
+  background-color: #00ABF0;
+}
+header > .center {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 1rem 0;
+}
+
+header .logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 100px;
+}
+.logo-container img {
+  width: 70%;
+  max-width: 100%;
+}
+
+header .menu-container {
+  width: 100%;
+  max-width: 400px;
+}
+.menu-container .menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  list-style: none;
+}
+.menu-item {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+
+header .icones-container {
+
+}
+.icones-container .icones {
+  display: flex;
+  list-style: none;
+  gap: .6rem;
+}
+.icones a {
+  padding: .1rem;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+}
+.icones a img {
+  max-width: 100%;
+}
+
+
+.line-container {
+  margin-top: 1rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  border-top: solid 1px #ffffff70;
+}
+.line {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  transform: translateY(-50%);
+  transition: .3s ease-in-out all;
+}
+
+
+
+/* HERO */
+
+.hero {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-bottom: 4rem;
+  padding-right: 10%;
+  width: 100%;
+  height: 100%;
+  background: url('./images/banner-hero.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.button-outline {
+  position: relative;
+  border: solid 4px #fff;
+  background-color: transparent;
+  width: auto;
+  padding: .5rem;
+  font-size: 18px;
+  color: #fff;
+  letter-spacing: 2px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: .3s ease-in-out all;
+  overflow: hidden;
+  mix-blend-mode: screen;
+}
+.button-outline::before {
+  content: '';
+  width: 0;
+  height: 300%;
+  border-radius: 40%;
+  background-color: #FFF;
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  transition: .3s ease-in-out all;
+}
+
+
+.button-outline:hover::before {
+  top: -50%;
+  left: -50%;
+  border-radius: 50%;
+  width: 200%;
+  height: 200%;
+}
+
+.button-outline > span {
+  color: white;
+  mix-blend-mode: difference;
+}
+
+
+/*-----------------------------------------------------*/
+
+
+/* Section MENSAGEM */
+
+section.mensagem .center {
+  justify-content: space-between;
+  gap: 15px;
+  align-items: center;
+}
+section.mensagem .w50 > img {
+  max-width: 100%;
+}
+section.mensagem .w50 > p {
+  color: #0466B1;
+}
+section.mensagem .w50 p  span {
+  font-weight: bold;
+}
+
+
+/*--------------------------------------------------------------*/
+
+/* Section O Movimento */
+
+section.o-movimento {
+  background-color: #0C5B97;
+  color: #fff;
+}
+
+section.o-movimento .center {
+  padding: 2rem 0;
+  padding-bottom: 4rem;
+}
+.o-movimento h2 {
+  font-size: 32px;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+
+.o-movimento h2::after {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: -5%;
+  display: inline-block;
+  width: 200px;
+  height: 2px;
+  background-color: #fff;
+}
+.o-movimento .movimento-imagens {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.o-movimento .movimento-imagens img {
+  max-width: 50%;
+}
+
+
+
+
+/* Section A CAMINHADA */
+
+.a-caminhada {
+  width: 100%;
+}
+.a-caminhada .center {
+  padding-bottom: 2rem;
+}
+.a-caminhada > img {
+  max-width: 100%;
+  margin-bottom: 1rem;
+}
+.a-caminhada .section-title {
+  color: #0466B1;
+}
+.a-caminhada .section-title::after {
+  background-color: #0466B1;
+}
+.caminhada-mensagem-destaque {
+  max-width: 900px;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  color: #fff;
+  padding: 1rem 2rem;
+  background-color: #0466B1;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+.caminhada-data {
+  display: flex;
+  width: auto;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 350px;
+  padding: 1rem 2rem;
+  border: solid 4px #0466B1;
+}
+.caminhada-data img {
+  width: 40px;
+}
+
+.a-caminhada .flex .w50 {
+  color: #0466B1;
+}
+.a-caminhada .flex .w50 ul {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  list-style: inside;
+  font-weight: bold;
+  padding: 1rem 0;
+  padding-left: 1rem;
+}
+.a-caminhada .flex .w50 a {
+  margin: 1rem 0;
+  display: inline-block;
+  color: #0466B1;
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border: solid 4px #0466B1;
+  padding: .5rem 1rem;
+  background-color: transparent;
+  transition: .3s ease-in-out all;
+}
+.a-caminhada .flex {
+  gap: 4rem;
+  align-items: center;
+}
+.a-caminhada .flex .w50 a {
+  position: relative;
+}
+.a-caminhada .flex .w50 a::after {
+  content: '';
+display: inline-block;
+position: absolute;
+right: -50%;
+top: 0;
+  height: 100%;
+  width: 100px;
+  background: url('./images/seta.svg');
+  background-position: center;
+  background-size: contain;
+background-repeat: no-repeat;
+animation: 1.4s seta-anim infinite cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.a-caminhada .flex .w50 a:hover {
+  background-color: #0466B1;
+  color: #fff;
+}
+
+
+
+
+.convite {
+  padding: 2rem 0;
+  padding-bottom: 4rem;
+}
+.convite h2 {
+  color: #0466B1;
+}
+.convite h2::after {
+  background-color: #0466B1
+}
+.convite p {
+  color: #0466B1;
+  font-weight: 400;
+}
+
+
+
+
+/* SEÇÕES TEMÁTICAS */
+
+.secoes-tematicas {
+  padding: 2rem 0;
+  padding-bottom: 4rem;
+}
+.secoes-tematicas .section-title {
+  color: #0466B1;
+}
+.secoes-tematicas .section-title::after {
+  background-color: #0466B1;
+}
+.cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  width: 80%;
+  margin: 0 auto;
+}
+.card-single {
+  position: relative;
+  width: 30%;
+  min-height: 400px;
+  max-width: 300px;
+
+  transform-style: preserve-3d;
+  box-shadow: 0px 8px 12px 6px rgba(0, 0, 0, 0.15), 0px 4px 4px rgba(0, 0, 0, 0.3);
+  transition: .3s ease-in-out all;
+}
+.card-single.hovered {
+  animation: 1.4s card-anim infinite ease-in-out;
+}
+.card-single.flipped {
+  transform: rotateY(180deg);
+}
+
+.card-front{
+  z-index: 2;
+  background-color: #0466B1;
+  position: absolute;
+  top:0;
+  left:0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5rem;
+  padding: 1rem;
+  backface-visibility: hidden;
+}
+
+.card-single-top {
+  display: flex;
+  justify-content: flex-end;
+}
+.card-single-top span {
+  position: absolute;
+  font-size: 14px;
+  color: #FFF;
+  top: .5rem;
+  left: .5rem;
+}
+.card-single-top img {
+  width: 30%;
+}
+.card-single-bottom {
+  display: flex;
+  flex-direction: column;
+}
+.card-single-bottom span {
+  color: #fff;
+  font-size: 21px;
+  font-weight: 500;
+}
+.card-single-bottom a {
+  align-self: flex-end;
+}
+.card-single-bottom img {
+  width: 40px;
+}
+
+.card-back {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1rem;
+  border: solid 4px #0466B1;
+  background-color: #fff;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+}
+.card-back-header {
+  display: flex;
+  justify-content: space-between;
+  color: #0466B1;
+}
+.card-back-header h3 {
+  text-align: center;
+}
+.card-back-header img {
+  width:15%;
+}
+.card-back-body p {
+  color: #0466B1;
+}
+.card-back-footer {
+  align-self: flex-end;
+}
+
+
+
+
+
+@keyframes seta-anim {
+
+  50% {
+    right: -70%;
+  }
+
+}
+
+@keyframes card-anim {
+  0% {
+    top: 0px;
+  }
+  50% {
+    top: -20px;
+  }
+  100% {
+    top: 0px;
+  }
+}
